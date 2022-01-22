@@ -30,17 +30,17 @@
           <li>
             <%=link_to("ユーザー一覧","/users/index")%>
           </li>
-          <li>
+          <li class="list1">
             <%=link_to("ログアウト","/logout",{method: :post})%>
           </li>
         <% else %>
           <li>
             <%=link_to("MyMateとは","/about")%>
           </li>
-          <li>
+          <li class="list2">
             <%=link_to("新規登録","/signup")%>
           </li>
-          <li>
+          <li class="list2">
             <%=link_to("ログイン","/login")%>
           </li>
         <% end %>
