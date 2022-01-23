@@ -1,0 +1,12 @@
+<div class="form">
+  <%= form_for [@group,@message] do |f|%>
+    <%= f.text_field :content, class: "form_messages", placeholder: "type a message"%>
+      <div class="form_mask">
+        <%= f.label :image, class: "form_mask_image" do%>
+          <%=icon("fas", "image",class: "icon")%>
+          <%= f.file_field :image, class: "hidden"%>
+        <% end %>
+      </div>
+    <%=f.submit "Send", class: "form_submit"%>
+  <% end %>
+</div>
