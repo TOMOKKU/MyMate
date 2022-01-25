@@ -8,7 +8,7 @@
         <% end %>
       </li>
       <li class="list">
-        <%= link_to edit_user_path do%>
+        <%= link_to edit_user_path(current_user) do%>
           <%= icon("fas", "cog", class: "icon")%>
         <% end %>
       </li>
@@ -16,12 +16,12 @@
     <div class="groups">
       <% @current_user.groups.each do |group|%>
         <div class="group">
-          <%= form_with url: do |form|%>
+          <%= link_to group_messages_path(gruop) do %>
             <div class="group_name">
               <%= group.name%>
             </div>
             <div class="group_message">
-              <p>メッセージはまだありません</p>
+              <%= group.show_last_messages%>
             </div>
           <% end %>
         </div>

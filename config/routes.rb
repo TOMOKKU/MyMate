@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
 
+  get "groups/new" => "groups#new"
+
   resources :groups, only: [:new, :create, :edit, :update]
 
   get "/" => "home#top"
