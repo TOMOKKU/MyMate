@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body{
-	background-color:red;
+.post-list {
+	display: none;
 }
+
+.posts-index-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.post-left > img{
+	border-radius: 30%;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	object-fit: cover;	
+}
+
+.post-right a{
+	color: black;
+}
+
+

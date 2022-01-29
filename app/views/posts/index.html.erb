@@ -1,5 +1,14 @@
+<% content_for :css do %>
+    <%= stylesheet_link_tag 'posts' %>
+<% end %>
+
+<% content_for :js do %>
+    <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
 <div class="main posts-index">
-  <div class="search">
+  <div class="search" id="search_form">
+    <button class="fas fa-search" id="search_show_button"></button>
     <%= form_with url: search_posts_path, method: :get, local: :true do |form| %>
       <%= form.text_field :keyword, value: @keyword %>
       <%= form.submit "search" %>
