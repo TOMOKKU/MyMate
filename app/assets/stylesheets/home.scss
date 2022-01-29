@@ -189,6 +189,23 @@ header {
   width: 100%;
   border-radius: 0 0 2px 2px;
   font-size: 14px;
+  animation: fadein-keyframes 3s ease 0s 1 forwards;
 }
+
+@keyframes fadein-keyframes {
+  0% {
+    opacity: 0.5;
+  }
+  3% {
+	opacity: 1;
+  }
+  50% {
+	opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
