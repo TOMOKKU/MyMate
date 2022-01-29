@@ -11,7 +11,8 @@
     <%= yield :css %> 
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application'%>
+    <%= yield :js %>
+    <script src="https://kit.fontawesome.com/aa98e80a27.js" crossorigin="anonymous"></script>
   </head>
 
 
