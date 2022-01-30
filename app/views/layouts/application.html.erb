@@ -7,12 +7,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= yield :css %>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application'%>
+    <%= yield :js %>
+    <script src="https://kit.fontawesome.com/aa98e80a27.js" crossorigin="anonymous"></script>
   </head>
 
+
   <body>
-  #ヘッダー（ツールバー）--------------------/
+  <!-- ヘッダー（ツールバー） -->
     <header>
       <div class="header-logo">
         <%=link_to("MyMate","/")%>
@@ -48,14 +53,14 @@
       </ul>
     </header>
 
-#アクション完了時の通知------------------------/
+<!-- アクション完了時通知 -->
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice]%>
       </div>
     <% end %>
 
-#各テンプレートをあてはめてから出力--------------/
+<!-- 各テンプレートをあてはめてから出力 -->
     <%= yield %>
   </body>
 </html>
