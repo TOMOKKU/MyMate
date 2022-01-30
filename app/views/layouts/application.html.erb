@@ -12,6 +12,7 @@
   </head>
 
   <body>
+  #ヘッダー（ツールバー）--------------------/
     <header>
       <div class="header-logo">
         <%=link_to("MyMate","/")%>
@@ -47,13 +48,14 @@
       </ul>
     </header>
 
+#アクション完了時の通知------------------------/
     <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice]%>
       </div>
     <% end %>
 
-
+#各テンプレートをあてはめてから出力--------------/
     <%= yield %>
   </body>
 </html>
