@@ -184,7 +184,28 @@ header {
 
 /* 検索フォーム ================================ */
 .search {
+	display: flex;
 }
+
+.search-form-wrapper {
+	display: flex;
+	transform: translateX(90%);
+}
+
+.search-form-wrapper > form {
+	display: flex;
+}
+
+.search-brank {
+	display: block;
+	width: 100%;
+}
+
+.search-slide {
+	transform: translateX(0%);
+	transition: 0.5s;
+}
+
 
 
 /* フラッシュ ================================ */
