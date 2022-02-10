@@ -233,8 +233,12 @@ header {
   50% {
 	opacity: 1;
   }
-  100% {
+  99% {
     opacity: 0;
+	z-index: 10
+  }
+  100% {
+    z-index: -10
   }
 }
 
