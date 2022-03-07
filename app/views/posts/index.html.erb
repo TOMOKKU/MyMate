@@ -9,8 +9,8 @@
 <div class="main posts-index">
   <div class="search">
     <div class="search-brank"></div>
-    <div class="search-form-wrapper" id="search_form">
-      <button class="fas fa-search" id="search_show_button"></button>
+    <div class="search-form-wrapper slide-hidden" id="search_form">
+      <button class="fa-solid fa-magnifying-glass" id="search_show_button"></button>
       <%= form_with url: search_posts_path, method: :get, local: :true do |form| %>
         <%= form.text_field :keyword, value: @keyword %>
         <%= form.submit "search" %>

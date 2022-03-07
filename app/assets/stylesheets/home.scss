@@ -201,11 +201,15 @@ header {
 	width: 100%;
 }
 
-.search-slide {
+.slide-appear {
 	transform: translateX(0%);
 	transition: 0.5s;
 }
 
+.slide-hidden {
+	transform: translateX(90%);
+	transition: 0.5s;
+}
 
 
 /* フラッシュ ================================ */
