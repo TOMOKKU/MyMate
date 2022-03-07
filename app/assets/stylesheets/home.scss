@@ -12,6 +12,7 @@ html {
   height: 100%;
   line-height: 1.7;
   letter-spacing: 1px;
+  overflow: hidden;
 }
 
 ul, li {
@@ -71,7 +72,7 @@ header {
   position: absolute;
   z-index: 1;
   width: 100%;
-  background-color: #ff8f66;
+  background-color: $theme-color;
 }
 
 .header-logo {
@@ -159,6 +160,7 @@ header {
 .form textarea {
   width: 100%;
   min-height: 110px;
+  resize: none;
   font-size: 16px;
   letter-spacing: 2px;
 }
@@ -188,12 +190,36 @@ header {
 }
 
 .search-form-wrapper {
+	box-shadow:  0 5px 15px 0 rgba(0, 0, 0, 0.3);
 	display: flex;
-	transform: translateX(90%);
+	margin-top: 3vmin;
+	margin-right: 3px;
+}
+
+.search-form-wrapper > button{
+	background-color: $theme-color;
+	border: none;
+	color: white;
+	font-size: 20px;
+	line-height: 25px
 }
 
 .search-form-wrapper > form {
 	display: flex;
+}
+
+.search-form-wrapper > form > input[type="text"]{
+	background-color: $page-background-color;
+	border: none;
+	font-size: 1em;
+}
+
+.search-form-wrapper > form > input[type="submit"]{
+	background-color: #3ecdc6;
+	border-radius: 2px;
+	color: white;
+	float: right;
+	font-size: 1em;
 }
 
 .search-brank {
