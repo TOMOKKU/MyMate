@@ -2,31 +2,35 @@
     <%= stylesheet_link_tag 'users' %>
 <% end %>
 
+<% content_for :js do %>
+    <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+<% end %>
+
 <div class="main users-index">
-  <div class="container">
-    <h1 class="users-heading">ユーザー一覧</h1>
-    <div class="search">
+  <div class="search">
+    <div class="search-brank"></div>
+    <div class="search-form-wrapper slide-hidden" id="search_form">
+      <button class="fa-solid fa-magnifying-glass" id="search_show_button"></button>
       <%= form_with url: search_users_path, method: :get, local: :true do |form| %>
-        <div class="search-field">
           <%= form.text_field :keyword, value: @keyword %>
           <%= form.submit "search" %>
-        </div>
       <% end %>
     </div>
-    <div class="user-list">
-      <% @users.each do |user| %>
-        <%= link_to(user.name,"/users/#{user.id}") %>
-      <% end %>
-    </div>
-    <% @users.each do |user|%>
-      <div class="users-index-item">
-        <div class="user-left">
-          <img src="<%= "/user_images/#{user.image_name}"%>" >
-        </div>
-        <div class="user-right">
-          <%= link_to(user.name,"/users/#{user.id}")%>
-        </div>
-      </div>
-    <% end %>
   </div>
+<div class="user-list">
+  <% @users.each do |user| %>
+    <%= link_to(user.name,"/users/#{user.id}") %>
+  <% end %>
+</div>
+<div class="container">
+  <% @users.each do |user|%>
+    <div class="users-index-item">
+      <div class="user-left">
+        <img src="<%= "/user_images/#{user.image_name}"%>" >
+      </div>
+      <div class="user-right">
+        <%= link_to(user.name,"/users/#{user.id}")%>
+      </div>
+    </div>
+  <% end %>
 </div>

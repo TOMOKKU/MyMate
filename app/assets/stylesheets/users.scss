@@ -1,1 +1,21 @@
+.user-list {
+	display: none;
+}
 
+.users-index-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.user-left > img{
+	border-radius: 30%;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	object-fit: cover;
+}
+
+.user-right a{
+	color: black;
+}

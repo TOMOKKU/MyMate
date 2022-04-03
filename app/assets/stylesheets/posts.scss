@@ -17,11 +17,17 @@
 	height: 50px;
 	width: 50px;
 	margin: 5px;
-	object-fit: cover;	
+	object-fit: cover;
 }
 
 .post-right a{
 	color: black;
 }
 
+.like-btn {
+  color: #8899a6;
+}
 
+.like-btn-unlike {
+  color: #ff2581;
+}
