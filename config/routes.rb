@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   get "search/posts" => "posts#search"
 
   get "messages" => "messages#index"
-  get "groups/new" => "group#new"
-  get "groups/edit" => "groups#edit"
-
 
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"

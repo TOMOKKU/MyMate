@@ -12,6 +12,20 @@
 	margin-bottom: 10px;
 }
 
+.posts-show-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px
+}
+
+.post-user-name > img{
+	border-radius: 30%;
+	height: 50px;
+	width: 50px;
+	margin: 5px;
+	object-fit: cover
+}
+
 .post-left > img{
 	border-radius: 30%;
 	height: 50px;
